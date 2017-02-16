@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<!--
+Author: Syed Taqi Raza
+Breakfast order form!
+
+-->
+
+<html>
+
+<head>
+
+   <title>Lab 06 - Part 1</title>
+   
+   <meta charset="UTF-8" >
+
+   <script src="functions.js" type="text/javascript"></script>
+   <link href="order.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+   <h2> Online Breakfast Boutique </h2>
+   <fieldset>
+   <legend> Online Breakfast Boutique</legend>
+   <fieldset>
+   <legend>Delivery Information </legend>
+   <form name="myOrder" action="process_order.php" method="POST" onsubmit="return validateOrder('myOrder')">
+   <div id="textbox1">
+      <label for="email1">My Email: <input type=email" name="email" id="email1" required/> <br/>
+	  
+       First Name: <input type="text" name="fname" required/> <br/>
+	  
+      <label for="lname1">Last Name: <input type="text" name="lname" id="lname1" required/> <br/>
+	  
+	 <label for ="deladd"> Delivery Address: <input type="text" name="address" id="deladd" required/> <br/>
+	  <label for="city1"> City: <input type="text" name="city" id="city1" required/> <br/>
+	  
+	  <label for ="provn">Province: <select name="prov" id="provn"required>
+					<option value="ON">Ontario</option>
+					<option value="AB">Alberta</option>
+					<option value="BC">British Columbia</option>
+					<option value="XX"></option>					
+				</select>
+		</div>		
+				<br/>
+	  </fieldset>
+	</br>
+      <fieldset>
+	  <legend>Order Details</legend>
+	  <div="items">
+      <label for="i1">Item 1: <input type="number" name="item1"  id="i1" size="3" value="0"/> (Breakfast) $4.34<br/>
+	  
+      <label for="i2"> Item 2: <input type="number" name="item2" id="i2" size="3" value="0"/> (Starbucks Coffee) $1.32<br/> <br/>
+	  </div>
+	  </fieldset>
+		</br>
+      <input type="submit" value="Order"/>  
+      <input type="reset" value="Reset"/>
+    </form>
+	<br/>
+	<p id="error" style="color:red"></p>
+	</fieldset>
+</body>
+	
+</head>
+
+
+</html>
